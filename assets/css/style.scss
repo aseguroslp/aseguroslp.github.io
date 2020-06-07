@@ -3,6 +3,23 @@
 
 @import "{{ site.theme }}";
 
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(43, 51, 77);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
 .social div {
     display: inline-block;
     height: auto;
