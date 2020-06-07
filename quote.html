@@ -1,23 +1,84 @@
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Gracias. Estaremos en contacto con usted.');
-  });
-</script>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+        $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Gracias. Estaremos en contacto con usted.');
+        });
+    </script>
 
-<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSckWTQVc_jUaqaRMOJ0NG3IxZyXNKAgJxlP0sQg7k_hn_vQjQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-    Marca:<br>
-    <input type="text" name="entry.758504028" /><br />
-    
-    Modelo:<br>
-    <input type="text" name="entry.1483084327" /><br />
+{% seo %}
+  </head>
 
-    Anio:<br>
-    <input type="text" name="entry.511336808" />
+  <body>
+    <div class="sidenav">
+        <a href="about.html">Quienes somos</a>
+        <a href="quote.html">Cotizar</a>
+        <a href="index.html">Seguros</a>
+        <a href="companies.html">Companias</a>
+    </div>
 
-    <input type="submit" value="Cotizar" />
-</form>
+    <div class="main">
+        <div id="container">
+        <div class="inner">
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+            <header>
+            <h1>Aseguro SLP</h1>
+            </header>
+            <hr>
+            <section id="main_content">
+                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSckWTQVc_jUaqaRMOJ0NG3IxZyXNKAgJxlP0sQg7k_hn_vQjQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                    Marca:<br>
+                    <input type="text" name="entry.758504028" /><br />
+                    
+                    Modelo:<br>
+                    <input type="text" name="entry.1483084327" /><br />
+
+                    Anio:<br>
+                    <input type="text" name="entry.511336808" />
+
+                    <input type="submit" value="Cotizar" />
+                </form>
+
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+            </section>
+
+            <footer>
+                <div class="social">
+                    <div>
+                        <a href="https://web.whatsapp.com/send?phone=521444888888&text=Hola%2C%20quiero%20un%20seguro"><img src="assets/images/social/WhatsApp.png" width="20" height="20"/></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/aseguroslp/"><img src="assets/images/social/Instagram.png" width="20" height="20"/></a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        </div>
+    </div>
+
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
+</html>
+<!-- From https://github.com/pages-themes/tactile/blob/master/_layouts/default.html -->
