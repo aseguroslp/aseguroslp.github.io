@@ -10,11 +10,16 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(43, 51, 77);
     overflow-x: hidden;
     padding-top: 20px;
-  }
-  
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     padding: 0px 10px;
