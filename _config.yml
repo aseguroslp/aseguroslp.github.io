@@ -1,3 +1,33 @@
-theme: jekyll-theme-tactile
-title: Seguros en San Luis Potosi
-description: Manteniendote asegurado.
+name                    : "asegura +"
+locale                  : "es-MX"
+remote_theme            : "mmistakes/minimal-mistakes@4.19.3"
+title                   : ""
+description             : Manteniendote asegurado.
+search                  : true
+search_full_content     : true
+include                 : ["_pages"]
+logo                    : "/assets/images/logo.png"
+masthead_title          : ""
+defaults:
+    # _posts
+    - scope:
+        path: ""
+        type: posts
+      values:
+        layout: single
+        read_time: true
+        comments: true
+        share: true
+        related: true
+footer:
+    links:
+        - label: "WhatsApp"
+          icon: "fab fa-fw fa-whatsapp"
+          url: https://web.whatsapp.com/send?phone=521444888888&text=Hola%2C%20quiero%20un%20seguro
+        - label: "Instagram"
+          icon: "fab fa-fw fa-instagram"
+          url: https://www.instagram.com/aseguroslp
+
+
+plugins:
+    - jekyll-include-cache
