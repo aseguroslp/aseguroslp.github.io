@@ -3,7 +3,5 @@ main:
       url: about.html
     - title: "Cotizar"
       url: quote.html
-    - title: "Seguros"
-      url: types.html
     - title: "Companias"
       url: companies.html

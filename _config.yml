@@ -3,8 +3,6 @@ locale                  : "es-MX"
 remote_theme            : "mmistakes/minimal-mistakes@4.19.3"
 title                   : ""
 description             : Manteniendote asegurado.
-search                  : true
-search_full_content     : true
 include                 : ["_pages"]
 logo                    : "/assets/images/logo.png"
 masthead_title          : ""
